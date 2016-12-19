@@ -1,4 +1,8 @@
 
+* {
+  margin: 0;
+}
+
 html,
 body,
 div,
@@ -20,23 +24,89 @@ section {
   font-size: 100%;
   vertical-align: baseline;
 }
+html,
+body {
+  height: 100%;
+}
+
+/*.wrapper{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 -4em;
+    justify-content:
+    flex: 1;
+}*/
+
+.footer-inner {
+  height: 4em;
+  clear: both;
+  font-family: "Raleway", Raleway, Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 25px;
+  flex-grow: 1;
+  align-items: baseline;
+  text-align: center;
+  padding-top: -10%;
+  color: grey;
+}
+
+.site {
+  display: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.push {
+  flex-grow: 1;
+  text-align: center;
+}
+
 #enterHere {
   text-align: center;
 }
 
-#Layer_1 {
-  margin-left: 32%;
-  margin-bottom: 2%;
-  max-width: 30%;
-  /*display: flex;*/
-  /*position: absolute;
-  top: 2%;
-  right: 2%;
-  max-width: 20%;*/
+#title {
+  padding-top: -5%;
+  margin-bottom: 4%;
 }
-.rdletters,
-.tagline {
+
+#Layer_1 {
+  flex:.25;
+  max-width: 30%;
+  opacity: .4;
+  margin-left: 10%;
+  margin-bottom: -2.5%;
+}
+
+.container {
+  font-family: "Raleway", Raleway, Arial, sans-serif;
+  /*box-sizing: border-box;*/
+  flex: 4;
+  width: 70%;
+  max-width: 825px;
+  background: white;
+  padding: 30px 15px;
+  margin: 5% auto 10%;
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 4px 1px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 4px 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 1px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.5%;
+}
+
+.bluepart {
   fill: grey;
+  stroke: grey;
+}
+
+.whitepart,
+.tagline {
+  fill: black;
   stroke: lightgrey;
   opacity: 1;
 }
@@ -45,10 +115,16 @@ section {
   stroke: grey;
 }
 
+.tagline {
+  opacity: 0;
+}
+
 #form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #flower,
@@ -56,17 +132,18 @@ section {
 #thc,
 #cbd {
   font-family: Raleway;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 10px 10px 0px;
   padding: 10px;
   border: solid 5px #c9c9c9;
   transition: border 0.3s;
-  max-width: 15%;
-  min-width: 130px;
+  /*max-width: 15%;
+  min-width: 130px;*/
   box-sizing: border-box;
+  flex-grow: 1;
 }
 
-#flower input[type="text"]:focus,
-#cups input[type="text"].focus {
+#flower input[type="number"]:focus,
+#cups input[type="number"].focus {
   border: solid 5px #969696;
 }
 
@@ -122,25 +199,25 @@ p {
   line-height: 1.4;
 }
 
-.container {
-  font-family: "Raleway", Raleway, Arial, sans-serif;
-  box-sizing: border-box;
-  width: 70%;
-  max-width: 1080px;
-  background: white;
-  padding: 30px 15px;
-  margin: 0 auto;
-  /*position: relative;*/
-  overflow: hidden;
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 4px 1px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 4px 1px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 4px 1px 0 rgba(0, 0, 0, 0.2);
-  align-content: center;
+#button {
+  /*margin-top: 2%;
+  margin-bottom: 4%;*/
+  text-transform: uppercase;
+}
+
+#button1 {
+  /*margin-bottom: -2%*/
+}
+
+#reset {
+  /*box-sizing: border-box;
+  margin-bottom: 4%;*/
+  text-transform: uppercase;
 }
 
 #button,
-#button1 {
+#button1,
+#reset {
   width: 15%;
   min-width: 130px;
   font-family: "Raleway", Raleway, Arial, sans-serif;
@@ -152,12 +229,13 @@ p {
   border: 3px solid #3f8abf;
   outline: none;
   cursor: pointer;
+  align-self: center;
   /*display: -moz-inline-stack;
   display: inline-block;*/
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
+  /*vertical-align: middle;
+  *vertical-align: auto;*/
+  /*zoom: 1;
+  *display: inline;*/
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -170,13 +248,172 @@ p {
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  margin-bottom: 10px;
 }
 
-#button:hover {
+#button1 {
+  border: 3px solid grey;
+  background: grey;
+  -webkit-box-shadow: 0 2px 0 0 grey;
+  -moz-box-shadow: 0 2px 0 0 grey;
+  box-shadow: 0 2px 0 0 grey;
+}
+
+#button:hover,
+#reset:hover {
   background: #397cac;
   border-color: #s;
   -webkit-box-shadow: 0 2px 0 0 #2c6085;
   -moz-box-shadow: 0 2px 0 0 #2c6085;
   box-shadow: 0 2px 0 0 #2c6085;
+}
+
+#reset,
+#button1 {
+  margin-top: 2%;
+}
+
+/* MEDIA RULES FOR RESPONSIVE SCREEN DESIGN */
+@media (min-width: 100px) {
+  #button,
+  #button1,
+  #reset {
+    margin-left: 23%;
+  }
+}
+
+@media (min-width: 500px) {
+  #button,
+  #button1,
+  #reset {
+    margin-left: 30%;
+  }
+}
+
+@media (min-width: 700px) {
+  #form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 7%;
+    margin-left: 7%;
+  }
+  #button,
+  #button1,
+  #reset {
+    margin-left: 35%;
+  }
+}
+
+@media (min-width: 800px) {
+  #form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  #button,
+  #button1,
+  #reset {
+    margin-left: 31.5%;
+  }
+}
+
+@media (min-width: 832px) {
+  #form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 12%;
+    margin-left: 12%;
+  }
+  #button,
+  #button1,
+  #reset {
+    margin-left: 34%;
+  }
+}
+
+
+@media (min-width: 940px) {
+  #form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 16%;
+    margin-left: 16%;
+  }
+  .tagline {
+    opacity: 1;
+    fill: black;
+    stroke: black;
+  }
+#Layer_1 {
+  max-width: 25%;
+}
+
+  }
+
+  @media (min-width: 980px) {
+    #button,
+    #button1,
+    #reset {
+      margin-left: 35%;
+    }
+  }
+
+@media (min-width: 1037px) {
+  #form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  #button,
+  #button1,
+  #reset {
+    margin-left: 46.5%;
+  }
+  #Layer_1 {
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 1070px) {
+  #button,
+  #button1,
+  #reset {
+    margin-left: 48%;
+  }
+}
+
+@media (min-width: 1100px) {
+  #button,
+  #button1,
+  #reset {
+    margin-left: 49.5%;
+  }
+}
+
+  @media (min-width: 1160px) {
+    #form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-right: 3%;
+      margin-left: 3%;
+    }
+    #button,
+    #button1,
+    #reset {
+      margin-left: 52%;
+    }
+    #button {
+      margin-top: 1.5%;
+    }
+    #Layer_1 {
+      max-width: 20%;
+      margin-left: 15%;
+    }
+}
+
+@media (min-width: 1500px) {
+  #layer_1 {
+    max-width: 15%;
+  }
 }

@@ -13,7 +13,7 @@ function getAnswer() {
     var resultcbd = ((flower * 1000) * (cbd*.01)) / (cups * 8)
       console.log(resultthc, resultcbd);
       function displayPercent () {
-          document.write("You have " + resultthc + "mg of THC per 1 ounce dose, and " + resultcbd + "mg of CBD per dose.");
+          document.write("You will have " + resultthc + "mg THC and " + resultcbd + "mg CBD per 1 ounce dose.");
         }
       return displayPercent;
 }

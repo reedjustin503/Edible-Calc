@@ -9,7 +9,7 @@ function getNumbers () {
 
 function getAnswer() {
   getNumbers ();
-    var resultthc = ((flower * 1000) * (thc*.01)) / (cups * 8)
+    var resultthc = (((flower * 1000)*.90) * (thc*.01)) / (cups * 8)
     var resultcbd = ((flower * 1000) * (cbd*.01)) / (cups * 8)
       console.log(resultthc, resultcbd);
       function displayPercent () {
